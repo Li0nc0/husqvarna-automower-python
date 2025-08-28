@@ -1,6 +1,8 @@
 # Husqvarna Automower Data Fetcher (Python)
 
-### 🧪 Tested for / testé pour : AM 315X
+### 🧪 Tested for / testé pour : AM 315X 
+Nota : `message` function does not exist / la fonction `message` n'existe pas
+
 ### 👉🏻 Fill free to contribute / n'hésitez pas à contribuer
 
 ## 🇬🇧 English
