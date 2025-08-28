@@ -1,5 +1,8 @@
 # Husqvarna Automower Data Fetcher (Python)
 
+### 🧪 Tested for / testé pour : AM 315X
+### 👉🏻 Fill free to contribute / n'hésitez pas à contribuer
+
 ## 🇬🇧 English
 
 A simple Python script to authenticate against the Husqvarna Automower API and fetch data for each mower:
@@ -35,10 +38,10 @@ You can generate the app_key and app_secret from your [Husqvarna Developer accou
 Run the script:
 ```
 # Default (reads config.json, writes to mowers_details_messages.json)
-python husqvarna_file_auth.py
+python husqvarna_get_api.py
 
 # Custom config and output file
-python husqvarna_file_auth.py my_config.json output.json
+python husqvarna_get_api.py config.json data.json
 ```
 
 ### Example output
@@ -54,41 +57,19 @@ Example output.json:
         "id": "12345678-abcd-efgh-ijkl-1234567890ab",
         "type": "mower",
         "attributes": {
-          "model": "AUTOMOWER® 315X",
-          "name": "HusqyCoxy",
+          "model": "XXXX",
+          "name": "XXXXX",
           "status": "IN_OPERATION",
           "battery": {
             "percent": 87,
             "charging": false
           },
           "location": {
-            "latitude": 45.123456,
-            "longitude": 5.987654
+            "latitude": XX.XXXXX,
+            "longitude": XX.XXXXX
           }
         }
       }
-    },
-    "messages": {
-      "data": [
-        {
-          "id": "msg-001",
-          "type": "message",
-          "attributes": {
-            "timestamp": "2025-08-28T14:30:00Z",
-            "message": "Démarrage de la tonte",
-            "severity": "INFO"
-          }
-        },
-        {
-          "id": "msg-002",
-          "type": "message",
-          "attributes": {
-            "timestamp": "2025-08-28T14:40:00Z",
-            "message": "Capteur de levage déclenché",
-            "severity": "WARNING"
-          }
-        }
-      ]
     }
   }
 ]
@@ -134,17 +115,18 @@ Vous pouvez générer app_key et app_secret depuis votre [compte développeur Hu
 Exécutez le script :
 ```
 # Par défaut (lit config.json, écrit dans mowers_details_messages.json)
-python husqvarna_file_auth.py
+python husqvarna_get_api.py
 
 # Config et fichier de sortie personnalisés
-python husqvarna_file_auth.py mon_config.json sortie.json
+python husqvarna_get_api.py config.json data.json
 ```
 
 ### Exemple de résultat
 
 Exemple de output.json :
 
-```[
+```
+[
   {
     "mower_id": "12345678-abcd-efgh-ijkl-1234567890ab",
     "timestamp": "2025-08-28T14:52:00.123456+00:00",
@@ -153,41 +135,19 @@ Exemple de output.json :
         "id": "12345678-abcd-efgh-ijkl-1234567890ab",
         "type": "mower",
         "attributes": {
-          "model": "AUTOMOWER® 315X",
-          "name": "HusqyCoxy",
+          "model": "XXXX",
+          "name": "XXXXX",
           "status": "IN_OPERATION",
           "battery": {
             "percent": 87,
             "charging": false
           },
           "location": {
-            "latitude": 45.123456,
-            "longitude": 5.987654
+            "latitude": XX.XXXXX,
+            "longitude": XX.XXXXX
           }
         }
       }
-    },
-    "messages": {
-      "data": [
-        {
-          "id": "msg-001",
-          "type": "message",
-          "attributes": {
-            "timestamp": "2025-08-28T14:30:00Z",
-            "message": "Démarrage de la tonte",
-            "severity": "INFO"
-          }
-        },
-        {
-          "id": "msg-002",
-          "type": "message",
-          "attributes": {
-            "timestamp": "2025-08-28T14:40:00Z",
-            "message": "Capteur de levage déclenché",
-            "severity": "WARNING"
-          }
-        }
-      ]
     }
   }
 ]
